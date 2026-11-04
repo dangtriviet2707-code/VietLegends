@@ -1,0 +1,10 @@
+VIET LEGENDS — CHANGELOG 1.2.3
+
+CẬP NHẬT HÌNH ẢNH HỘI THOẠI NPC
+- Thay hình SVG minh họa Hắc Bạch Vô Thường bằng ảnh chân dung fantasy chi tiết của cả hai vị, luôn hiển thị trong khung thoại.
+- Bổ sung chân dung Diêm Vương khi người chơi báo cáo và nhận thưởng tại Điện Diêm Vương.
+- Bổ sung chân dung Ngọc Hoàng Thượng Đế khi đối thoại tại Lăng Tiêu Bảo Điện.
+- Giữ nguyên nội dung, tiến trình nhiệm vụ, nút Tiếp/Đóng và cơ chế hội thoại hiện có.
+- Tối ưu khung chân dung cho màn hình nhỏ.
+
+Ảnh NPC được lưu tại public/assets/npc/.

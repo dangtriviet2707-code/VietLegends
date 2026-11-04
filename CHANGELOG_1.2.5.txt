@@ -1,0 +1,38 @@
+VIET LEGENDS — CHANGELOG 1.2.5
+================================
+
+Sửa lỗi điều khiển (ưu tiên cao):
+- Loại bỏ lệnh tự động đóng hội thoại khi nhấn WASD/phím mũi tên.
+- Giữ nguyên cơ chế chặn điều khiển trong lúc hội thoại; phím di chuyển không làm mất hội thoại.
+- Sự kiện keyup tiếp tục xóa đúng trạng thái phím; đóng hội thoại vẫn reset trạng thái điều khiển và joystick để tránh kẹt input.
+- Không vô hiệu hóa hệ thống điều khiển, chiến đấu hoặc kỹ năng.
+
+Hội thoại NPC:
+- Ảnh chân dung luôn dùng object-fit: contain trên máy tính và điện thoại, giữ tỷ lệ gốc, tránh crop.
+- Mỗi câu thoại xác định người nói từ tiền tố tên trước dấu hai chấm.
+- Hắc Vô Thường và Bạch Vô Thường dùng hai file chân dung riêng được tách từ ảnh gốc có cả hai; ảnh gốc vẫn dùng cho cảnh đôi.
+- Tên người nói và ảnh chân dung cập nhật theo từng câu; giữ nguyên nút Tiếp tục, chạm màn hình, và logic đóng ở câu cuối.
+- Không thay đổi thông điệp hội thoại phía server, nhiệm vụ, phần thưởng hoặc điều kiện mở khóa.
+
+Tài nguyên:
+- Thêm assets/npc/hac-vo-thuong.jpg và assets/npc/bach-vo-thuong.jpg.
+- Giữ nguyên ảnh gốc Hắc Bạch Vô Thường, Diêm Vương, Ngọc Hoàng và Công chúa.
+- Không thay đổi server.js, schema dữ liệu, hệ thống tài khoản, lưu trữ, WebSocket hoặc cơ chế chiến đấu.
+
+Giới hạn phạm vi:
+- Bộ source v1.2.4 chỉ có sẵn 4 ảnh NPC ban đầu. Phiên bản này chưa tạo đủ bộ chân dung riêng cho toàn bộ NPC được liệt kê trong yêu cầu; các NPC chưa có ảnh phù hợp sẽ không bị gán nhầm ảnh của NPC khác.
+- Chưa thay đổi mô hình nhân vật/boss trên bản đồ; đây là hạng mục cần một đợt thiết kế asset và kiểm thử riêng.
+
+Kiểm thử kỹ thuật:
+- Đã kiểm tra cấu trúc ZIP đầu vào và toàn bộ 14 mục trong source.
+- Sẽ chạy kiểm tra cú pháp Node.js/client, liên kết ảnh và cấu trúc ZIP sau khi đóng gói.
+- Chưa tuyên bố kiểm thử gameplay trực quan trên trình duyệt hoặc multiplayer thực tế.
+
+
+Kết quả kiểm tra cuối:
+- node --check server.js: PASS.
+- node --check JavaScript inline của public/index.html: PASS.
+- server.js giữ nguyên SHA-256 so với bản 1.2.4.
+- Tất cả đường dẫn ảnh NPC đang được client tham chiếu đều tồn tại.
+- ZIP đã được tạo và kiểm tra đọc lại.
+- Chưa chạy gameplay trực quan; dependency ws chưa có trong môi trường kiểm thử.

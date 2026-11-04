@@ -1,0 +1,84 @@
+VIET LEGENDS 1.2.1 – ADMIN, MAP SỐ VÀ HIỆU ỨNG TUYỆT KỸ
+
+1. ĐĂNG KÝ / ĐĂNG NHẬP
+- Màn hình đầu game có hai chế độ Đăng nhập và Đăng ký.
+- Đăng ký yêu cầu tên tài khoản 3–14 ký tự (chữ, số, dấu gạch dưới), mật khẩu 8–64 ký tự và nhập lại mật khẩu.
+- Đăng nhập chỉ nhận tài khoản đã tồn tại; không tự tạo tài khoản mới.
+- Tài khoản cũ trong data/accounts.json vẫn đăng nhập bằng mật khẩu cũ. Không xóa thư mục data khi cập nhật.
+- Mỗi tài khoản chỉ có một phiên đăng nhập cùng lúc.
+
+2. HỌC TUYỆT KỸ
+- Chưởng Ma Lực: đến Đại Lộ Âm Dương, gặp Ma Đạo Sư ở phía nam bản đồ. Yêu cầu cấp 16, đã mở khóa Âm Giới, học phí 120 vàng.
+- Triệu Hồi Sấm Sét: đến Lôi Đình Điện, gặp Lôi Pháp Tiên Nhân ở phía nam. Yêu cầu cấp 24, Thiên Giới giai đoạn 3, học phí 500 vàng.
+- Vạn Kiếm Quy Tông: đến Thiên Binh Doanh, gặp Kiếm Tiên ở phía nam. Yêu cầu cấp 26, Thiên Giới giai đoạn 3, học phí 800 vàng.
+- Khi đứng gần sư phụ, chạm NPC hoặc bấm Tương tác/Mở lồng để học. Kỹ năng đã học được lưu trong hồ sơ nhân vật.
+- Trên máy tính: K dùng Chưởng Ma Lực, 2 dùng Sấm Sét, 3 dùng Vạn Kiếm.
+- Trên điện thoại: dùng các nút Chưởng Ma Lực, Sấm Sét, Vạn Kiếm ở cụm thao tác bên phải; mở tab Kỹ năng để xem hướng dẫn.
+- Hắc Quỷ Bình Điển của Diêm Vương vẫn nâng cấp Chưởng Ma Lực thành Ma Cầu Hắc Ám Chưởng diện rộng.
+
+3. TÀI KHOẢN ADMIN
+Tài khoản quản trị được viết cứng trong server.js theo yêu cầu. Server tự tạo hoặc đồng bộ quyền admin khi khởi động.
+
+- Tên đăng nhập: Vietadmin
+- Mật khẩu: Viet@190845
+- Không cần cấu hình ADMIN_USERNAME hoặc ADMIN_PASSWORD trên Render.
+- Tài khoản có cấp độ tối đa, vàng, vật phẩm, toàn bộ tuyệt kỹ và quyền admin.
+
+CẢNH BÁO BẢO MẬT: Mật khẩu nằm trực tiếp trong mã nguồn. Chỉ lưu repository ở chế độ riêng tư và không chia sẻ ZIP/source cho người khác. Người có quyền đọc server.js có thể xem mật khẩu. Mật khẩu hiện tại dài 11 ký tự; nên đổi sang mật khẩu mạnh hơn trước khi mở game công khai.
+
+Lệnh admin nhập trực tiếp trong khung chat:
+/help                         Xem danh sách lệnh
+/players                      Xem người chơi online
+/announce <nội dung>          Thông báo toàn server
+/maps                         Xem danh sách 12 map theo số thứ tự
+/goto <1-12 hoặc mã>          Dịch chuyển đến map
+/questreset                   Đặt lại nhiệm vụ từ đầu, giữ cấp/trang bị/kỹ năng admin
+/level <1-30>                 Đặt cấp
+/gold <số>                    Đặt số vàng
+/exp <số>                     Cộng EXP
+/heal                         Hồi đầy máu
+/spawn <mã_quái>              Triệu hồi quái/Boss
+/skill all                    Mở toàn bộ tuyệt kỹ
+/unlock                       Mở toàn bộ cốt truyện/map
+/kick <tên>                   Ngắt kết nối người chơi
+/save                         Lưu dữ liệu ngay
+/god on|off                   Bật/tắt bất tử
+
+MÃ MAP THEO SỐ (dùng /goto 1 đến /goto 12):
+1 Làng Khởi Đầu (town)
+2 Đồng Cỏ Xanh (field)
+3 Rừng Sương Mù (forest)
+4 Đại Lộ Âm Dương (duong)
+5 Hoang Mạc Hồn (am)
+6 Điện Dẫn Hồn (hbdien)
+7 Đại Điện U Minh (daidien)
+8 Nam Thiên Môn (sky)
+9 Vườn Bàn Đào (sky_peach)
+10 Thiên Binh Doanh (sky_camp)
+11 Lôi Đình Điện (sky_thunder)
+12 Lăng Tiêu Bảo Điện (sky_palace)
+Vẫn có thể dùng /goto với mã chữ cũ, ví dụ /goto sky_palace.
+Lệnh /spawn dùng mã quái nội bộ trong MOB_TPL, ví dụ: slime, ghost, vonglinh, chungquy, bloithan, mathan.
+
+4. ĐIỀU KHIỂN ĐIỆN THOẠI
+- Joystick bên trái để di chuyển.
+- Chạm mặt đất để di chuyển tới vị trí.
+- Nút Tương tác/Mở lồng để nói chuyện với NPC, sư phụ và mở lồng công chúa.
+- Nút Đánh, Bình máu, Chưởng Ma Lực, Sấm Sét, Vạn Kiếm và Cửa hàng ở bên phải.
+- Nhà, Trang bị, Túi đồ, Nhiệm vụ và Kỹ năng mở từ menu cảm ứng.
+- Chat/lệnh admin dùng ô chat; chạm ô chat, nhập lệnh rồi gửi bằng bàn phím điện thoại.
+
+5. LƯU Ý
+- Bản này tiếp tục dùng file JSON cục bộ hiện tại; chưa chuyển sang Neon/PostgreSQL theo yêu cầu tạm hoãn của người chơi.
+- Hãy giữ bản sao thư mục data/accounts.json trước khi thay code.
+- Mật khẩu được lưu dưới dạng hash scrypt + salt, không lưu mật khẩu dạng rõ.
+
+
+6. ADMIN VÀ HIỆU ỨNG TUYỆT KỸ (1.2.1)
+- Vietadmin có sẵn áo, quần, giày Thần Thoại bậc Thiên Kim (bậc 6), cùng vũ khí Thiên Kim mạnh nhất.
+- Tiến trình nhiệm vụ Vietadmin được reset về đầu một lần trong bản 1.2.1; các lần khởi động server tiếp theo không reset nữa.
+- /questreset reset tuyến nhiệm vụ và đưa admin về Làng Khởi Đầu; giữ nguyên cấp, đồ và kỹ năng.
+- Chưởng Ma Lực bắn luồng tia hắc ám theo hướng nhân vật đang nhìn, có va chạm theo đường bay phía trước.
+- Triệu Hồi Sấm Sét tạo 7 tia sét giáng xuống quanh mục tiêu.
+- Vạn Kiếm Quy Tông tạo kiếm trận 28 thanh kiếm bay tỏa ra từ người thi triển.
+- Các nút cảm ứng thi triển kỹ năng trên điện thoại được giữ nguyên.

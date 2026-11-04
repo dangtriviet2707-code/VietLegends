@@ -1,0 +1,26 @@
+VIET LEGENDS — CHANGELOG 1.2.4
+================================
+
+Nâng cấp giao diện hội thoại NPC:
+- Chuyển hộp thoại nhỏ thành cutscene toàn màn hình, có bố cục nhân vật và khung thoại riêng.
+- Chân dung lớn, tự co giãn trên điện thoại; khung lời thoại có giới hạn chiều cao và cuộn để tránh tràn chữ.
+- Có tên nhân vật, chỉ số câu thoại và nút Tiếp tục/Kết thúc; chạm vùng hội thoại cũng chuyển câu.
+- Không cho phím di chuyển đóng hội thoại; Escape không bỏ qua các câu còn lại.
+- Giữ nguyên điều kiện đóng ở câu cuối, không sửa luồng nhiệm vụ/phần thưởng trên server.
+- Tích hợp chân dung Công chúa Thiên Đình tại assets/npc/cong-chua.jpg.
+- Dùng chân dung riêng hiện có cho Hắc Bạch Vô Thường, Diêm Vương và Ngọc Hoàng.
+
+Nâng cấp hiển thị trong bản đồ:
+- Tăng kích thước và chi tiết áo bào/đầu/viền trang phục NPC thông thường.
+- Tăng tỷ lệ boss, bổ sung lớp giáp vai/ngực, sừng/vương miện, vũ khí và ánh hào quang.
+- Mở rộng thanh máu boss và thêm viền nhận diện.
+- Cải thiện hình vẽ Công chúa trong lồng giam.
+
+Bảo toàn:
+- server.js và logic nhiệm vụ, chiến đấu, tài khoản, lưu dữ liệu không bị thay đổi.
+- Không thêm Neon/PostgreSQL hoặc thay đổi định dạng dữ liệu tài khoản.
+
+Kiểm thử:
+- Đã chạy node --check cho server.js và JavaScript client.
+- Đã kiểm tra đường dẫn/tồn tại các ảnh NPC, cấu trúc ZIP và khởi động HTTP server.
+- Chưa thực hiện kiểm thử gameplay trực quan qua trình duyệt nhiều người chơi.

@@ -1,0 +1,3 @@
+Tài khoản admin đã được viết cứng trong server.js theo yêu cầu.
+Không cần tạo ADMIN_USERNAME hoặc ADMIN_PASSWORD trong Render Environment.
+Xem mục 3 trong HUONG_DAN_TAI_KHOAN_KY_NANG_ADMIN.txt để biết thông tin đăng nhập và lưu ý bảo mật.

@@ -1,0 +1,24 @@
+VIET LEGENDS 1.2.2 - FIX HỘI THOẠI VÀ TUYẾN NHIỆM VỤ ÂM GIỚI
+
+1. Hội thoại Hắc Bạch Vô Thường
+- Khung thoại có chân dung minh họa của cả Hắc Vô Thường và Bạch Vô Thường.
+- Hai chân dung luôn hiển thị trong toàn bộ các trang thoại; nhân vật đang nói được làm nổi bật.
+- Có thoại tương ứng khi gặp lại sau khi đã mở đường.
+
+2. Sửa tuyến Chung Quỳ - Hắc Vọng Oan Linh
+- Không sinh Hắc Vọng Oan Linh ngay từ đầu map.
+- Hạ đủ 10 Quỷ Gác Cổng mới xuất hiện Chung Quỳ.
+- Khi đến gần Chung Quỳ theo kịch bản, người chơi nhận thất bại, chuyển sang giai đoạn Hắc Vọng Oan Linh.
+- Hắc Vọng Oan Linh được triệu hồi đúng giai đoạn; chỉ hạ đúng Boss tại Đại Điện U Minh mới tăng tiến độ.
+- Nếu người chơi đang ở giai đoạn nhiệm vụ tương ứng và vào lại Đại Điện, Boss nhiệm vụ sẽ được khôi phục nếu chưa có.
+
+3. Điện Diêm Vương
+- Sau khi hạ Hắc Vọng Oan Linh, người chơi tự động chuyển sang map riêng Điện Diêm Vương.
+- Map không có quái, có NPC Diêm Vương và lối đi tiếp lên Nam Thiên Môn sau khi nhận thưởng.
+- Chạm Tương tác/Nói chuyện với Diêm Vương để báo cáo, nhận Hắc Quỷ Bình Điển và hoàn tất nhiệm vụ Âm Giới.
+- Mã map admin mới: /goto 13. Các mã 1-12 được giữ nguyên.
+
+4. Kiểm tra
+- Đã chạy node --check cho server.js và script client trích từ public/index.html.
+- Đã kiểm tra tính toàn vẹn ZIP.
+- Chưa thực hiện kiểm thử gameplay nhiều người chơi trên Render hoặc điện thoại thật.

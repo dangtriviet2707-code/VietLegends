@@ -1,0 +1,27 @@
+VIET LEGENDS v1.2.9 — NPC & QUEST REPAIR
+
+NPC
+- Added distinct fantasy portraits for Trưởng Làng Mộc, Thợ Săn Bảy, and Lý Bạch.
+- Added name-based portrait resolution for all three NPCs.
+- Added a fallback portrait when a portrait URL fails to load; the dialogue panel no longer silently removes the image on the first image error.
+
+QUEST 12–14
+- Added explicit persisted completion flags for Thiên Giới II, III, and IV.
+- Existing v1.2.8 saves without the new flags are migrated from their existing skyStage value to preserve recorded progression.
+- Quest 12 only completes after 8 Yêu Hầu Giữ Đào kills.
+- Quest 13 only completes after 10 Thiên Tướng kills.
+- Quest 14 only completes after 8 Lôi Linh kills and the Lôi Thần boss is defeated.
+- Objective counters and completion state are saved immediately after relevant kills.
+- Added a dead-mob guard to prevent duplicate processing/rewards for the same mob.
+
+PRESERVATION
+- No database reset or account deletion.
+- No changes to combat formulas, damage, skills, equipment, item tables, or WebSocket protocol.
+- No changes to the earlier five village quests or the later final boss objective.
+
+VALIDATION
+- Server JavaScript syntax: PASS.
+- Client inline JavaScript syntax: PASS.
+- Quest function-level regression tests: PASS (node tests/quest-regression.test.js).
+- HTTP static delivery of all four NPC image files: PASS using a local static-server smoke test.
+- Full WebSocket gameplay, Chrome/iPhone Safari, and Render deployment: NOT RUN in this environment; these remain deployment acceptance tests.

@@ -1,0 +1,46 @@
+BAO CAO SUA LOI VIET LEGENDS v1.2.9
+
+1. PHAM VI
+Nguon: VIET-LEGENDS-v1.2.8-QUEST-LEVEL16.zip.
+Phan sua: anh chan dung NPC va logic tien trinh nhiem vu 12, 13, 14.
+
+2. LOI NPC VA KHAC PHUC
+- portraitFor() chua co mapping cho ten Truong Lang Moc va Tho San Bay; Ly Bach bi tra ve null.
+- dlgPage() truoc day co the an anh neu khong co URL hoac khi image.onerror xay ra.
+- Them 3 file JPG rieng: truong-lang-moc.jpg, tho-san-bay.jpg, ly-bach.jpg.
+- Them mapping theo ten NPC va anh du phong npc-fallback.jpg.
+- Khi anh chinh loi, giao dien thu tai anh du phong; neu ca anh du phong cung loi thi moi an phan anh.
+
+3. LOI / RUI RO NHIEM VU VA KHAC PHUC
+- Trang thai hoan thanh cac nhiem vu Thien Gioi II–IV truoc day phu thuoc vao skyStage, mot bien dong thoi dieu khien mo khoa khu vuc va the hien tien trinh.
+- Them skyDone[3] de luu trang thai hoan thanh rieng cho quest 12–14.
+- Save v1.2.8 khong co skyDone duoc migration theo stage da ghi: stage > 1 giu quest 12 hoan thanh; stage > 2 giu quest 13; stage > 3 giu quest 14. Khong reset stage hoac tien trinh cu.
+- Quest 12: chi danh dau hoan thanh sau 8 Yêu Hầu Giữ Đào.
+- Quest 13: chi danh dau hoan thanh sau 10 Thiên Tướng.
+- Quest 14: 8 Lôi Linh chi goi boss; chi danh dau hoan thanh sau khi ha Lôi Thần.
+- Luu bo dem va co hoan thanh sau cac su kien ha quai lien quan.
+- Chan xu ly lai mob da chet de tranh cap nhat / thuong lap tren cung mot mob.
+
+Luu y save cu: migration co chu y giu stage da duoc ghi trong save cu. Neu tai khoan da bi luu skyStage sai tu truoc khi cap nhat, khong the tu dong phan biet stage sai voi tien trinh that ma khong co ban sao du lieu tai khoan. Khong tu y reset stage.
+
+4. FILE THAY DOI / THEM MOI
+- server.js
+- public/index.html
+- package.json (version 1.2.9)
+- public/assets/npc/truong-lang-moc.jpg (moi)
+- public/assets/npc/tho-san-bay.jpg (moi)
+- public/assets/npc/ly-bach.jpg (moi)
+- public/assets/npc/npc-fallback.jpg (moi)
+- CHANGELOG_1.2.9.txt
+- BAO_CAO_NGUYEN_NHAN_VA_KIEM_THU_1.2.9.txt
+- tests/quest-regression.test.js
+
+5. KET QUA KIEM THU TAI MOI TRUONG LAM VIEC
+- PASS: node --check server.js.
+- PASS: node tests/quest-regression.test.js (migration, nguong Q12/Q13/Q14, boss gate, duplicate kill, save hooks).
+- PASS: cu phap cac inline script trong public/index.html.
+- PASS: HTTP 200 cho 4 anh NPC qua static server local.
+- NOT RUN: WebSocket end-to-end voi client that; Chrome desktop; iPhone Safari; Render deployment; tai khoan cu va moi tren moi truong production.
+
+6. GIOI HAN VA KET LUAN
+Ma nguon da duoc sua va dong goi phien ban 1.2.9. Cac kiem thu syntax, regression logic va phuc vu anh tinh deu PASS. Module ws khong co san trong moi truong lam viec va viec cai dat phu thuoc bi timeout, nen khong the khoi dong server WebSocket de chay gameplay end-to-end tai day. Vi vay goi nay la ban da sua va kiem thu cuc bo, chua duoc chung nhan production tren Render / iPhone Safari. Khi trien khai, chay npm install roi npm start; can kiem thu gameplay tren staging truoc khi dua len production.

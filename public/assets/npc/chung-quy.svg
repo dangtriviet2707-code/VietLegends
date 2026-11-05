@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="768" viewBox="0 0 512 768">
+<defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#4b1d28"/><stop offset="1" stop-color="#090e16"/></linearGradient><radialGradient id="glow"><stop stop-color="#e5a94b" stop-opacity=".45"/><stop offset="1" stop-color="#e5a94b" stop-opacity="0"/></radialGradient><linearGradient id="robe" x2="1" y2="1"><stop stop-color="#e5a94b"/><stop offset="1" stop-color="#28202a"/></linearGradient></defs>
+<rect width="512" height="768" fill="url(#bg)"/><circle cx="256" cy="280" r="230" fill="url(#glow)"/>
+<path d="M40 768 Q55 570 155 520 L205 480 L307 480 L360 520 Q460 570 472 768Z" fill="url(#robe)" stroke="#e5a94b" stroke-width="8"/>
+<path d="M170 250 Q150 105 256 90 Q362 105 342 250 L325 390 Q256 465 187 390Z" fill="#d7ad8c" stroke="#382a26" stroke-width="9"/>
+<path d="M165 235 Q140 80 260 65 Q375 80 350 245 L323 190 Q256 140 188 195Z" fill="#17171c" stroke="#e5a94b" stroke-width="9"/>
+<path d="M205 300 Q256 330 307 300" fill="none" stroke="#6d3735" stroke-width="8" stroke-linecap="round"/>
+<path d="M205 255 L238 252 M275 252 L308 255" stroke="#241c1d" stroke-width="11" stroke-linecap="round"/>
+<path d="M256 265 L245 315 L265 316" fill="none" stroke="#9a6b55" stroke-width="7"/>
+<path d="M190 420 L256 505 L322 420" fill="none" stroke="#e5a94b" stroke-width="16"/>
+<circle cx="256" cy="570" r="58" fill="#101923" stroke="#e5a94b" stroke-width="7"/><path d="M256 525 L270 560 L306 570 L270 583 L256 618 L242 583 L206 570 L242 560Z" fill="#e5a94b"/>
+<rect x="20" y="20" width="472" height="728" rx="24" fill="none" stroke="#e5a94b" stroke-width="5"/>
+<text x="256" y="680" fill="#fff1cf" font-size="30" font-family="serif" text-anchor="middle" font-weight="bold">CHUNG QUỲ</text>
+<text x="256" y="720" fill="#e5a94b" font-size="18" font-family="sans-serif" text-anchor="middle" letter-spacing="6">JUDGE</text></svg>

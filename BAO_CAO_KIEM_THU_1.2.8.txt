@@ -1,0 +1,41 @@
+VIET LEGENDS v1.2.8 — BÁO CÁO KIỂM TRA
+======================================
+
+NGUỒN
+- VIET-LEGENDS-v1.2.7-FANTASY-NPC-ALL-PLUS.zip
+- Phân tích trực tiếp server.js, public/index.html, package.json và assets/npc.
+
+PHÁT HIỆN LUỒNG NHIỆM VỤ
+- Giải cứu công chúa là nhiệm vụ số 5 trong 5 nhiệm vụ Dân Gian.
+- Hoàn thành riêng nhiệm vụ này chỉ đặt q.d[4] = true.
+- Cờ q.open chỉ được bật khi cả 5 phần tử q.d đều true.
+- Cổng forest -> duong dùng điều kiện road16: q.open và cấp nhân vật >= 16.
+- Vì vậy người chơi hoàn thành Giải cứu công chúa vẫn có thể bị chặn nếu thiếu một
+  trong 4 nhiệm vụ Dân Gian khác hoặc chưa đạt cấp 16.
+- Đã sửa thông báo từ một câu gộp thành hướng dẫn nêu chính xác điều kiện còn thiếu.
+- Đã bổ sung mục tiêu quest do server tính và đồng bộ tới client.
+
+NPC
+- 6 ảnh JPG v1.2.7 được giữ nguyên.
+- Bổ sung các ảnh SVG riêng cho NPC còn thiếu và ánh xạ hội thoại.
+- Bổ sung cơ chế thử ảnh dự phòng khi ảnh chân dung chính lỗi tải.
+
+KIỂM TRA ĐÃ THỰC HIỆN
+- node --check server.js: PASS.
+- node --check JavaScript inline trong public/index.html: PASS.
+- Kiểm tra 18 đường dẫn chân dung được ánh xạ: tất cả tồn tại trong gói.
+- Kiểm tra các mã template quái và map được dùng làm mục tiêu dẫn đường: PASS.
+
+KIỂM TRA CHƯA THỂ XÁC NHẬN
+- Smoke test HTTP/WebSocket không chạy được trong môi trường đóng gói vì thư viện
+  npm `ws` chưa được cài trong sandbox (MODULE_NOT_FOUND). package.json vẫn khai báo
+  ws ^8.18.0; cần npm install ở máy deploy.
+- Chưa chạy được gameplay end-to-end để hoàn tất 5 nhiệm vụ, nhận thưởng và đi qua
+  cổng trên client thực tế.
+- Chưa kiểm thử Chrome, iPhone Safari hoặc kết nối/lưu dữ liệu trên Render/Supabase.
+- Chân dung SVG là ảnh dự phòng riêng, không đạt mức artwork 3D cinematic như yêu cầu.
+
+KẾT LUẬN
+- Đây là bản nâng cấp mã nguồn và kiểm tra tĩnh; chưa đủ bằng chứng để tuyên bố
+  nghiệm thu hoàn toàn theo điều kiện cuối cùng của yêu cầu.
+- Giữ lại ZIP v1.2.7 gốc để rollback.

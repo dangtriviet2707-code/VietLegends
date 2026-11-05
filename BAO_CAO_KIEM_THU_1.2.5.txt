@@ -1,0 +1,30 @@
+VIET LEGENDS v1.2.5 — BÁO CÁO KIỂM THỬ
+=====================================
+
+Nguồn: viet-legends-v1.2.4.zip
+Kết quả: kiểm tra tĩnh đạt; chưa xác nhận gameplay trực quan.
+
+ĐÃ KIỂM TRA
+- Đã đọc cấu trúc toàn bộ gói nguồn đầu vào (14 mục).
+- server.js: node --check — PASS.
+- JavaScript inline trong public/index.html: node --check — PASS.
+- Xác nhận server.js không bị thay đổi so với bản 1.2.4 — PASS (SHA-256 giống nhau).
+- Xác nhận đoạn tự động closeDlg() khi nhấn WASD/phím mũi tên đã bị loại bỏ — PASS.
+- Xác nhận nhánh keydown vẫn ghi nhận các phím điều khiển trong gameplay — PASS.
+- Xác nhận keyup vẫn xóa trạng thái phím và closeDlg vẫn reset trạng thái input — PASS (kiểm tra mã tĩnh).
+- Xác nhận CSS chân dung dùng object-fit: contain trên desktop và mobile — PASS.
+- Xác nhận từng câu thoại phân tích người nói từ tiền tố tên để chọn chân dung Hắc/Bạch riêng — PASS (kiểm tra mã tĩnh).
+- Kiểm tra tất cả URL ảnh NPC được tham chiếu trong client đều tồn tại — PASS.
+- Kiểm tra các ảnh mới có thể mở và đọc được bằng Pillow — PASS.
+- Đóng gói ZIP và kiểm tra khả năng liệt kê/đọc lại archive — PASS.
+
+CHƯA KIỂM THỬ / GIỚI HẠN
+- Chưa chạy gameplay trong trình duyệt; chưa kiểm tra chuyển động WASD, phím mũi tên và joystick bằng thao tác thực tế.
+- Chưa kiểm tra luồng hội thoại/nhiệm vụ/nhận thưởng trên một phiên server đang chạy.
+- Không thể khởi động server trong môi trường kiểm thử hiện tại vì dependency npm `ws` chưa được cài (require('ws') báo MODULE_NOT_FOUND). Trên môi trường triển khai cần chạy npm install.
+- Chưa thực hiện kiểm thử multiplayer, lưu/đọc tài khoản thật hoặc kiểm thử trên điện thoại vật lý.
+- Chưa tạo đủ chân dung riêng cho toàn bộ NPC trong danh sách yêu cầu và chưa đại tu model NPC/boss trên bản đồ. Không gán ảnh của NPC khác làm ảnh thay thế cho các nhân vật chưa có asset.
+
+KẾT LUẬN
+- Bản 1.2.5 đã xử lý lỗi logic keydown/closeDlg, sửa cách hiển thị ảnh không crop, và tách ảnh Hắc/Bạch từ ảnh gốc hiện có.
+- Đây là bản nâng cấp kỹ thuật có kiểm tra cú pháp và asset; không phải xác nhận hoàn tất toàn bộ các hạng mục mỹ thuật hoặc kiểm thử gameplay trực tiếp.

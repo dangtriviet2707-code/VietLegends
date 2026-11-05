@@ -1,0 +1,25 @@
+BAO CAO SUA DOI v1.2.8
+
+1. Nguyên nhân trải nghiệm chưa hợp lý
+Đại Lộ Âm Dương đã có điều kiện vào là hoàn thành 5 nhiệm vụ Dân Gian và đạt cấp 16, nhưng bảng nhiệm vụ không hiển thị mục tiêu luyện cấp 16. Lời thoại Lính Canh Sống Sót cũng khiến người chơi hiểu rằng cổng mở ngay sau khi hoàn thành 5 nhiệm vụ.
+
+2. Cách sửa
+- Thêm nhiệm vụ số 6: Chuẩn bị bước vào Âm Lộ — Đạt cấp 16.
+- Nhiệm vụ chỉ mở khi cả 5 nhiệm vụ Dân Gian hoàn tất, trong đó có Giải cứu công chúa.
+- Tiến độ hiển thị 0/16 đến 16/16, dựa trên cấp nhân vật.
+- Nếu nhân vật đã đạt cấp 16 trước khi nhiệm vụ mở, nhiệm vụ tự hoàn thành ngay khi được mở.
+- Không thêm thuộc tính lưu mới; dữ liệu nhân vật cũ không cần migration.
+- Giữ nguyên điều kiện cổng road16: hoàn thành 5 nhiệm vụ và đạt cấp 16.
+
+3. File thay đổi
+- server.js
+- public/index.html
+- package.json
+- CHANGELOG_1.2.8.txt
+- BAO_CAO_SUA_DOI_1.2.8.txt
+
+4. Kiểm thử
+- Kiểm tra cú pháp Node.js của server.js.
+- Kiểm tra cú pháp JavaScript inline của trình duyệt.
+- Kiểm tra tĩnh luồng mở nhiệm vụ và điều kiện cổng.
+- Chưa chạy kiểm thử end-to-end trong trình duyệt hoặc môi trường multiplayer.

@@ -1,2 +1,0 @@
-Không cần khai báo ADMIN_USERNAME hoặc ADMIN_PASSWORD trên Render.
-Phiên bản này giữ nguyên thông tin đăng nhập quản trị từ mã nguồn gốc.

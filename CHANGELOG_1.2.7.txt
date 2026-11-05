@@ -1,0 +1,17 @@
+VIET LEGENDS — CHANGELOG 1.2.7
+================================
+
+NÂNG CẤP HÌNH ẢNH NPC — FANTASY MMORPG 3D CINEMATIC
+
+- Làm mới toàn bộ 6 ảnh NPC: Diêm Vương, Ngọc Hoàng, Công Chúa, Hắc Vô Thường, Bạch Vô Thường và Hắc Bạch Vô Thường.
+- Đồng bộ phong cách hình ảnh theo hướng fantasy Á Đông, ánh sáng điện ảnh và trang phục chi tiết.
+- Chuẩn hóa ảnh chân dung về kích thước 512 × 768 để hiển thị nhất quán.
+- Điều chỉnh cách hiển thị ảnh trong cutscene hội thoại để nhân vật chiếm khung hình tốt hơn trên desktop và mobile.
+- Giữ nguyên ánh xạ ID NPC, nhận diện người thoại, nội dung hội thoại và toàn bộ logic gameplay.
+
+PHẠM VI THAY ĐỔI
+- public/assets/npc/*
+- public/index.html: chỉ tinh chỉnh CSS hiển thị chân dung hội thoại.
+- package.json: cập nhật phiên bản 1.2.7.
+
+Không thay đổi server.js, cơ chế chiến đấu, nhiệm vụ, vật phẩm, tài khoản, lưu trữ hoặc giao thức WebSocket.

@@ -1,0 +1,17 @@
+{
+  "name": "viet-legends",
+  "version": "1.2.7",
+  "description": "Viet Legends — Mini MMORPG tiên hiệp chạy trên trình duyệt",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  },
+  "author": "Trí Việt",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
+}
